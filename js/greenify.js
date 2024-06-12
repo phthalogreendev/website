@@ -21,7 +21,8 @@ document.getElementById('imageUpload').addEventListener('change', function(event
         // Apply green filter
         for (let i = 0; i < data.length; i += 4) {
             data[i] = 0; // Set red channel to 0
-            data[i + 2] = 0; // Set blue channel to 0
+            data[i + 1] = Math.min(data[i + 1] * 1.5, 255); // Intensify green channel
+            data[i + 2] = 10; // Set blue channel to 10
         }
 
         // Put the modified image data back on the canvas

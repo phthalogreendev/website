@@ -21,7 +21,7 @@ body, html {
 
 h1 {
     margin-bottom: 20px;
-    color: #28a745;
+    color: #123524;
 }
 
 input[type="file"] {
@@ -31,7 +31,7 @@ input[type="file"] {
 .file-label {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #123524;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -39,14 +39,14 @@ input[type="file"] {
 }
 
 .file-label:hover {
-    background-color: #218838;
+    background-color: #123524;
 }
 
 .download-button {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #28a745;
+    background-color: #123524;
     color: white;
     border-radius: 5px;
     cursor: pointer;
@@ -55,7 +55,7 @@ input[type="file"] {
 }
 
 .download-button:hover {
-    background-color: #218838;
+    background-color: #123524;
 }
 
 canvas {
@@ -89,12 +89,12 @@ img {
 }
 
 .contribute a {
-    color: #28a745;
+    color: #123524;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .contribute a:hover {
-    color: #218838;
+    color: #123524;
 }
