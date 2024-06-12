@@ -20,16 +20,20 @@ document.getElementById('imageUpload').addEventListener('change', function(event
 
         // Apply green filter
         for (let i = 0; i < data.length; i += 4) {
-            // data[i] is the red channel
-            // data[i + 1] is the green channel
-            // data[i + 2] is the blue channel
-            // data[i + 3] is the alpha channel
             data[i] = 0; // Set red channel to 0
             data[i + 2] = 0; // Set blue channel to 0
         }
 
         // Put the modified image data back on the canvas
         ctx.putImageData(imageData, 0, 0);
+
+        // Show the download button
+        const downloadButton = document.getElementById('downloadButton');
+        downloadButton.style.display = 'inline-block';
+
+        // Set up the download button
+        downloadButton.href = canvas.toDataURL('image/png');
+        downloadButton.download = 'green_image.png';
     };
 
     const reader = new FileReader();

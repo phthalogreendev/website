@@ -11,19 +11,57 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
+            justify-content: flex-start;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
         }
         .upload-section {
             text-align: center;
-            margin-bottom: 40px;
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #28a745;
         }
         input[type="file"] {
-            margin-bottom: 20px;
+            display: none;
+        }
+        .file-label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .file-label:hover {
+            background-color: #218838;
+        }
+        .download-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .download-button:hover {
+            background-color: #218838;
         }
         canvas {
-            border: 1px solid #000;
+            border: 1px solid #ddd;
             margin-top: 20px;
+            max-width: 100%;
+            border-radius: 10px;
         }
         .container {
             text-align: center;
@@ -34,30 +72,37 @@
             height: auto;
             display: block;
             margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .contribute {
             text-align: center;
             margin-top: 50px;
         }
         .contribute a {
-            color: #28a745; /* GitHub green */
+            color: #28a745;
             text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
         }
         .contribute a:hover {
-            color: #218838; /* Darker green on hover */
+            color: #218838;
         }
     </style>
 </head>
 <body>
+    <div class="upload-section">
+        <h1>Get Greened!</h1>
+        <label for="imageUpload" class="file-label">Upload Image</label>
+        <input type="file" id="imageUpload" accept="image/*">
+        <canvas id="imageCanvas"></canvas>
+        <a id="downloadButton" class="download-button" style="display: none;">Download Image</a>
+    </div>
     <div class="container">
         <img src="images/team_green.jpg" alt="Green Team">
-        <div class="upload-section">
-            <h1>Get Greened!</h1>
-            <input type="file" id="imageUpload" accept="image/*">
-            <canvas id="imageCanvas"></canvas>
-        </div>
         <div class="contribute">
-            <p>Want to contribute to Green Site? Make a pr to the pages site repo <a href="https://github.com/phthalogreendev/website" target="_blank">pages site repo</a></p>
+            <p>Want to contribute to the Green Site?</p>
+            <a href="https://github.com/phthalogreendev/website" target="_blank">pages site repo</a>
         </div>
     </div>
     <script src="js/greenify.js"></script>
